@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 <style>
@@ -15,10 +20,140 @@
         font-family: 'Poppins', sans-serif;
         background: linear-gradient(135deg, #1e3cff, #8a2be2, #ff4fa3) fixed;
     }
+
+    .container {
+        background-color: #d690b2;
+        padding: 50px;
+        border-radius: 15px;
+
+    }
+
+    .h1 {
+        font-weight: bold;
+
+    }
+
+    .username-field {
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    .username-field label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    .username-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 2px solid #02149d;
+        padding: 8px 4px;
+        transition: border-color 0.3s;
+    }
+    .username-input input {
+        flex: 1;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        padding: 6px 0;
+        color: #2b2b2b;
+    }
+
+    .username-input:focus-within {
+        border-color: #8a2be2;
+    }
+
+    .password-field {
+        margin: 20px 0;
+        text-align: left;
+    }
+    .password-field label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 8px;
+    }
+
+    .password-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 2px solid #02149d;
+        padding: 8px 4px;
+        transition: border-color 0.3s;
+    }
+
+    .password-input input {
+        flex: 1;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        padding: 6px 0;
+        color: #2b2b2b;
+    }
+
+    .password-input:focus-within {
+        border-color: #8a2be2;
+    }
+    #myForm button[type="submit"]{
+        width: 100%;
+        padding: 14px;
+        margin-top: 20px;
+        background: linear-gradient(135deg, #1e3cff, #8a2be2, #ff4fa3);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(138,43,226,0.3);
+        transition: all 0.3s ease;
+    }
+    #myForm button[type="submit"]:hover{
+        transform: translate(-3px);
+        box-shadow: 0 10px 25px rgba(138 43 226 0.5);
+        filter: brightness(1.1);
+    }
+    #myForm button[type="submit"]:active{
+        transform: scale(0.97);
+    }
+    #myForm button[type="submit"]:focus-visible{
+        outline: 3px solid #8a2be2;
+        outline-offset: 4px;
+    }
 </style>
 
 <body>
 
+    <div class="container">
+        <h1>Login your account</h1>
+        <!-- username -->
+        <div class="username-field">
+            <label for="username">Username</label>
+            <div class="username-input">
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+        </div>
+        <!-- password -->
+        <div class="password-field">
+            <label for="password">Password</label>
+            <div class="password-input">
+                <input type="text" id="password" placeholder="Enter your password" required>
+            </div>
+        </div>
+        <form id="myForm">
+            <button type="submit">Log in</button>
+        </form>
+    </div>
 </body>
 
 </html>
